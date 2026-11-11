@@ -1,0 +1,19 @@
+Glass Home — test version
+© 2026 Glass Home (github.com/bavahar09). All rights reserved.
+
+This is a test version for personal use. Please don't copy, modify, sell or redistribute it, or
+publish it elsewhere. Thank you for trying it and for any feedback.
+
+Parts made by others keep their own licences:
+
+Fonts (SIL Open Font License 1.1; the licence text is included with each app)
+  - Inter: The Inter Project Authors (github.com/rsms/inter)
+  - Nunito: The Nunito Project Authors (github.com/googlefonts/nunito)
+  - Bebas Neue: Dharma Type
+
+Photos in the browser, Samsung, LG and Roku versions
+  - Grand Teton day and night photos: Grand Teton National Park, U.S. National Park Service
+    (works of the U.S. federal government are in the public domain), via Wikimedia Commons.
+
+Wallpapers the TV app downloads are public domain or CC0; each one's credit and licence is shown
+in the wallpaper picker. Weather data: Open-Meteo (open-meteo.com), CC BY 4.0.

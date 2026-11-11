@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get Glass Home</title>
+<style>
+  :root { --bg: #0d1018; --card: #171c28; --card2: #1e2433; --line: #2a3142; --text: #eef1f7; --dim: #a3abbd; --accent: #4d8dff; --ok: #30d158; --code: #ffe08a; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 18px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 36px 16px 64px; }
+  h1 { font-size: 44px; line-height: 1.1; margin: 0 0 8px; }
+  h2 { font-size: 28px; margin: 0 0 6px; }
+  h3 { font-size: 20px; margin: 22px 0 6px; }
+  p { margin: 0 0 12px; }
+  .lead { color: var(--dim); font-size: 20px; margin: 0 0 26px; }
+  .steps3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 0 0 30px; }
+  .steps3 div { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; color: var(--dim); font-size: 16px; }
+  .steps3 b { display: block; color: var(--text); font-size: 18px; }
+  .pick { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 0 0 36px; }
+  a.tv, a.btn { display: block; text-decoration: none; color: #fff; border-radius: 16px; outline: none; }
+  a.tv { background: var(--card2); border: 1px solid var(--line); padding: 18px 20px; font-size: 22px; font-weight: 650; }
+  a.tv small { display: block; font-weight: 400; font-size: 14px; color: var(--dim); margin-top: 2px; }
+  a.btn { background: var(--accent); font-weight: 650; padding: 15px 20px; margin: 10px 0; font-size: 20px; max-width: 560px; }
+  a.btn small { display: block; font-weight: 400; font-size: 14px; opacity: .85; }
+  a.tv:focus, a.tv:hover, a.btn:focus, a.btn:hover { box-shadow: 0 0 0 4px #fff; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 26px 24px; margin: 0 0 22px; scroll-margin-top: 12px; }
+  .who { color: var(--dim); margin: 0 0 14px; font-size: 16px; }
+  .get { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; background: #23314d; color: #b9d0ff; margin-bottom: 10px; }
+  ol { padding-left: 24px; margin: 8px 0 0; }
+  ol li { margin: 6px 0; }
+  li b, p b { font-weight: 650; }
+  code { font: 15px/1.5 ui-monospace, Menlo, Consolas, monospace; color: var(--code); background: #0b0e15; padding: 2px 6px; border-radius: 6px; word-break: break-all; }
+  pre { font: 15px/1.6 ui-monospace, Menlo, Consolas, monospace; color: var(--code); background: #0b0e15; padding: 12px 14px; border-radius: 12px; overflow-x: auto; margin: 8px 0; white-space: pre-wrap; word-break: break-all; }
+  .after { background: var(--card2); border-radius: 16px; padding: 14px 18px; margin-top: 16px; }
+  .after h3 { margin-top: 0; }
+  .note { color: var(--dim); font-size: 15px; }
+  .hb { background: var(--card); border-radius: 12px; padding: 4px 14px 10px; margin: 10px 0; }
+  .hb p { margin: 10px 0 4px; }
+  .after a, .note a { color: #b9d0ff; }
+  .unsure { margin: -14px 0 14px; font-size: 17px; color: var(--dim); }
+  .unsure a { color: #b9d0ff; font-weight: 650; }
+  .clues { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 14px 0; }
+  a.clue { display: block; text-decoration: none; color: var(--text); background: var(--card2); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; font-size: 16px; outline: none; }
+  a.clue b { display: block; font-size: 19px; margin-bottom: 2px; }
+  a.clue span { display: block; margin-top: 6px; color: #b9d0ff; font-weight: 650; font-size: 15px; }
+  a.clue:focus, a.clue:hover { box-shadow: 0 0 0 4px #fff; }
+  details summary { cursor: pointer; margin-top: 10px; }
+  .top { display: inline-block; margin-top: 14px; color: var(--dim); font-size: 15px; }
+  .keys { display: grid; grid-template-columns: max-content 1fr; gap: 8px 14px; align-items: center; }
+  .k { display: inline-block; min-width: 54px; text-align: center; padding: 3px 10px; border: 1px solid #586178; border-radius: 9px; font-weight: 650; font-size: 16px; }
+  @media (max-width: 600px) { h1 { font-size: 34px; } body { font-size: 17px; } section { padding: 20px 16px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Get Glass Home on your TV</h1>
+  <p class="lead">A calm home screen for your TV: a big clock, weather, your photos, calendar and notes. This is a test version. Thank you for trying it!</p>
+
+  <div class="steps3">
+    <div><b>1 · Pick your TV</b>below — not sure? your remote tells you</div>
+    <div><b>2 · Follow the steps</b>about 5 minutes, all with the TV remote</div>
+    <div><b>3 · Glass Home sets itself up</b>it asks your name and city and shows you around</div>
+  </div>
+
+  <p class="unsure">Not sure which one you have? <a href="#which">Look at your TV remote →</a></p>
+  <div class="pick">
+    <a class="tv" href="#firetv">Amazon Fire TV<small>Fire TV Stick or Cube, and Fire TV built in (Insignia, Toshiba, some TCL, Hisense, Pioneer)</small></a>
+    <a class="tv" href="#googletv">Google TV / Android TV<small>Sony, Philips, TCL or Hisense Google TV, Chromecast, onn</small></a>
+    <a class="tv" href="#roku">Roku<small>Roku sticks, and Roku TVs by TCL, Hisense, onn, Sharp, Philips…</small></a>
+    <a class="tv" href="#samsung">Samsung<small>Samsung smart TVs</small></a>
+    <a class="tv" href="#lg">LG<small>LG smart TVs (webOS)</small></a>
+    <a class="tv" href="#appletv">Apple TV<small>The small black Apple box</small></a>
+    <a class="tv" href="#other">Another TV<small>Vizio, Hisense VIDAA, Panasonic, anything with a web browser</small></a>
+  </div>
+
+  <section id="which">
+    <h2>Which TV do I have?</h2>
+    <p class="who">The brand on the TV isn't enough: a TCL or Hisense TV can run Roku, Google TV, Fire TV or VIDAA. The remote (or the screen you see when the TV starts) tells you which. Pick the one that matches:</p>
+    <div class="clues">
+      <a class="clue" href="#firetv"><b>“fire tv” on the remote</b>or a blue microphone (Alexa) button; the home screen says “fire tv”<span>Amazon Fire TV →</span></a>
+      <a class="clue" href="#roku"><b>“Roku” on the remote</b>often purple buttons; the home screen is a grid of app tiles with a purple menu on the left<span>Roku →</span></a>
+      <a class="clue" href="#googletv"><b>A Google Assistant button</b>(a microphone or four coloured dots); the TV shows “Google TV” or “Android TV” when it starts<span>Google TV / Android TV →</span></a>
+      <a class="clue" href="#samsung"><b>“SAMSUNG” on the remote</b>the home screen is a row of apps along the bottom<span>Samsung →</span></a>
+      <a class="clue" href="#lg"><b>“LG” on the remote</b>often a pointer you move by waving the remote (Magic Remote)<span>LG →</span></a>
+      <a class="clue" href="#appletv"><b>A small black box with a slim remote</b>silver or black, with a touch surface or ring at the top<span>Apple TV →</span></a>
+      <a class="clue" href="#other"><b>“VIDAA”, Vizio, or something else</b>any TV with a web browser<span>Another TV →</span></a>
+    </div>
+    <p class="note">Still not sure? Open the TV's <b>Settings → About</b> (or <b>System → About</b>): it names the system, like <i>Fire OS</i>, <i>Roku OS</i>, <i>Google TV</i>, <i>Android TV</i>, <i>Tizen</i> (Samsung), <i>webOS</i> (LG) or <i>VIDAA</i>. If a streaming stick or box is plugged into the TV and that's what you watch on, pick the stick.</p>
+    <a class="top" href="#">↑ Pick your TV</a>
+  </section>
+
+  <section id="firetv">
+    <span class="get">Full Glass Home</span>
+    <h2>Amazon Fire TV</h2>
+    <p class="who">Fire TV Stick, Fire TV Cube, and TVs with Fire TV built in</p>
+    <ol>
+      <li>On the Fire TV, open <b>Find → Search</b>, type <b>Downloader</b>, and install the orange <b>Downloader</b> app.</li>
+      <li>Allow it to install apps: <b>Settings → My Fire TV → Developer options → Install unknown apps → Downloader → On</b>.
+        <br><span class="note">No <b>Developer options</b>? Go to <b>Settings → My Fire TV → About</b>, press <b>OK</b> on the device name 7 times, then go back.</span></li>
+      <li>Open <b>Downloader</b>, choose the address box and type this page's address: <code class="here">this page</code></li>
+      <li>On this page in Downloader, press <b>Install Glass Home</b> below → <b>Install</b> → <b>Open</b>.</li>
+    </ol>
+    <a class="btn" href="android-tv/GlassHome-AndroidTV-1.1.apk">Install Glass Home<small>Fire TV, Google TV and Android TV — one file</small></a>
+    <div class="after">
+      <h3>After it opens</h3>
+      <p>Glass Home walks you through setup with the remote: your name, city, a layout, the look, your phone as a remote. Later, it opens from <b>Your Apps &amp; Channels</b>.</p>
+      <h3>Optional: open it with the Home button</h3>
+      <p class="note">Fire TV only allows this from a computer, once. It also turns on <b>≡ ≡</b> (screen off, sound on) and <b>≡ ≡ ≡</b> (video in a widget).</p>
+      <ol>
+        <li>On the Fire TV, turn on <b>Settings → My Fire TV → Developer options → ADB debugging</b>, and open Glass Home.</li>
+        <li>On a Mac or Windows PC on the same Wi-Fi, open this page and run the helper. It finds the TV by itself.
+          <div class="hb">
+            <p><b>Mac:</b> open <b>Terminal</b> (Spotlight: ⌘ Space, type Terminal), paste this and press Return:</p>
+            <pre class="hb-mac">bash &lt;(curl -fsSL THIS-PAGE/home-button/mac.sh)</pre>
+            <p class="note">Or download <a href="home-button/GlassHome-HomeButton-Mac.zip">GlassHome-HomeButton-Mac.zip</a> and double-click the file inside. If the Mac says it can't check it: <b>System Settings → Privacy &amp; Security → Open Anyway</b>.</p>
+            <p><b>Windows:</b> open <b>PowerShell</b> (Start, type PowerShell), paste this and press Enter:</p>
+            <pre class="hb-win">irm THIS-PAGE/home-button/windows.ps1 | iex</pre>
+            <p class="note">Or download <a href="home-button/GlassHome-HomeButton-Windows.bat">GlassHome-HomeButton-Windows.bat</a> and double-click it. If Windows warns: <b>More info → Run anyway</b>.</p>
+          </div></li>
+        <li>When the TV asks to allow the computer, choose <b>Always allow from this computer</b>, then <b>OK</b>.</li>
+      </ol>
+      <p class="note">The helper gets Android's <i>adb</i> tool from Google if the computer doesn't have it, and changes only Glass Home's Home-button permission on the TV. Glass Home's setup screen turns ✓ by itself. Afterwards you can turn ADB debugging off again.</p>
+      <details class="note"><summary>Doing it by hand with adb</summary>
+      <pre>adb connect FIRE-TV-ADDRESS
+adb shell settings put secure enabled_accessibility_services com.bavahar.glass/com.bavahar.glass.HomeWatcher
+adb shell settings put secure accessibility_enabled 1
+adb shell pm grant com.bavahar.glass android.permission.WRITE_SECURE_SETTINGS</pre>
+      <p>The address is in <b>Settings → My Fire TV → About → Network</b>. If another accessibility service is on (e.g. VoiceView), add Glass Home's after it with a colon instead of replacing it.</p></details>
+    </div>
+    <a class="top" href="#">↑ Pick another TV</a>
+  </section>
+
+  <section id="googletv">
+    <span class="get">Full Glass Home</span>
+    <h2>Google TV &amp; Android TV</h2>
+    <p class="who">Sony, TCL, Hisense, Philips, Chromecast with Google TV, onn, and more</p>
+    <ol>
+      <li>Install the <b>Downloader</b> app from the <b>Google Play Store</b> on the TV.</li>
+      <li>Open <b>Downloader</b> and type this page's address: <code class="here">this page</code></li>
+      <li>Press <b>Install Glass Home</b> below. If the TV asks, allow Downloader to install apps (<b>Settings</b> → turn it on → press Back), then <b>Install</b> → <b>Open</b>.</li>
+    </ol>
+    <a class="btn" href="android-tv/GlassHome-AndroidTV-1.1.apk">Install Glass Home<small>Same file as Fire TV</small></a>
+    <div class="after">
+      <h3>After it opens</h3>
+      <p>Setup walks you through everything, including one switch that lets the <b>Home button</b> open Glass Home: setup opens <b>Settings → Accessibility</b> for you. Choose <b>Glass Home button</b>, turn it on, press Back.</p>
+    </div>
+    <a class="top" href="#">↑ Pick another TV</a>
+  </section>
+
+  <section id="samsung">
+    <span class="get">Clock, weather, world clocks · in the browser</span>
+    <h2>Samsung</h2>
+    <p class="who">Samsung smart TVs (2018 or newer)</p>
+    <p>Samsung only installs apps from its own store, so testers use Glass Home in the TV's browser. Nothing to install.</p>
+    <ol>
+      <li>Open the <b>Internet</b> app on the TV (Home → Apps → Internet).</li>
+      <li>Type this address: <code class="try">this page/try</code></li>
+      <li>Hide the browser's toolbar for the full look (move up to the toolbar → the full-screen button).</li>
+    </ol>
+    <a class="btn" href="try/">Open Glass Home here<small>Right here, if you're reading this on the TV</small></a>
+    <div class="after"><h3>After it opens</h3><p>It asks your name and city, then shows how the remote works. Press <b>OK</b> any time for Settings.</p></div>
+    <p class="note">Want the full version, with photos, calendar and your phone as a remote? <a href="#stick">Add a streaming stick</a>.</p>
+    <a class="top" href="#">↑ Pick another TV</a>
+  </section>
+
+  <section id="lg">
+    <span class="get">Clock, weather, world clocks · in the browser</span>
+    <h2>LG</h2>
+    <p class="who">LG smart TVs with webOS (2018 or newer)</p>
+    <ol>
+      <li>Open the <b>Web Browser</b> app on the TV.</li>
+      <li>Type this address: <code class="try">this page/try</code></li>
+      <li>Use the browser's full-screen button for the full look.</li>
+    </ol>
+    <a class="btn" href="try/">Open Glass Home here<small>Right here, if you're reading this on the TV</small></a>
+    <p class="note">Developers can also install it as an app: the <a href="lg-webos/GlassHome-LG-webOS-1.1.ipk" style="color:#b9d0ff">LG package</a> (needs LG's Developer Mode app and <code>ares-install</code>; Developer Mode expires every 50 hours).</p>
+    <p class="note">Want the full version, with photos, calendar and your phone as a remote? <a href="#stick">Add a streaming stick</a>.</p>
+    <a class="top" href="#">↑ Pick another TV</a>
+  </section>
+
+  <section id="roku">
+    <span class="get">Clock, weather, world clocks + screensaver</span>
+    <h2>Roku</h2>
+    <p class="who">Roku TVs, Streaming Stick, Ultra. Needs a computer or phone for the upload</p>
+    <ol>
+      <li>On the Roku remote press <b>Home ×3, Up ×2, Right, Left, Right, Left, Right</b>. Turn on <b>Developer Mode</b> and choose a password. The TV shows an address like <code>http://192.168.1.20</code>.</li>
+      <li>On a computer or phone on the same Wi-Fi, download the Roku file below, then open the TV's address and sign in as <b>rokudev</b> with your password.</li>
+      <li>Choose <b>Upload</b> → the file → <b>Install</b>. For the screensaver: <b>Settings → Theme → Screensavers → Glass Home</b>.</li>
+    </ol>
+    <a class="btn" href="roku/GlassHome-Roku-1.1.zip">Download for Roku<small>The file you upload in step 3</small></a>
+    <p class="note">Want the full version, with photos, calendar and your phone as a remote? <a href="#stick">Add a streaming stick</a>.</p>
+    <a class="top" href="#">↑ Pick another TV</a>
+  </section>
+
+  <section id="other">
+    <span class="get">Clock, weather, world clocks · in the browser</span>
+    <h2>Any other TV with a web browser</h2>
+    <p class="who">Vizio, Hisense VIDAA, Panasonic, game consoles…</p>
+    <ol>
+      <li>Open the TV's web browser.</li>
+      <li>Type this address: <code class="try">this page/try</code></li>
+    </ol>
+    <a class="btn" href="try/">Open Glass Home here<small>Right here, if you're reading this on the TV</small></a>
+    <p class="note">Want the full version, with photos, calendar and your phone as a remote? <a href="#stick">Add a streaming stick</a>.</p>
+    <a class="top" href="#">↑ Pick another TV</a>
+  </section>
+
+  <section id="appletv">
+    <span class="get">Not on Apple TV</span>
+    <h2>Apple TV</h2>
+    <p class="who">Apple TV has no web browser and only runs apps from Apple's App Store, so Glass Home can't run on it (yet).</p>
+    <ol>
+      <li>The TV the Apple TV is plugged into is often a smart TV itself. Use its own remote and look again at <a href="#which" style="color:#b9d0ff">which TV it is</a>: Samsung, LG, Roku or Google TV can show Glass Home.</li>
+      <li>Or add a small <a href="#stick" style="color:#b9d0ff">streaming stick</a> for the full version, next to the Apple TV.</li>
+    </ol>
+    <a class="top" href="#">↑ Pick another TV</a>
+  </section>
+
+  <section id="stick">
+    <span class="get">Full Glass Home on any TV</span>
+    <h2>Want everything, whatever your TV?</h2>
+    <p class="who">Roku, Samsung, LG and other TVs get the clock and weather version. For the full Glass Home (photos, calendar, notes, your phone as a remote, the Home button), plug a streaming stick into any free HDMI port:</p>
+    <ol>
+      <li><b>Amazon Fire TV Stick</b> (any 4K model), or a <b>Google TV</b> box or stick (onn 4K, Chromecast with Google TV, Google TV Streamer). Usually about $20–50.</li>
+      <li>Set it up, then follow the <a href="#firetv" style="color:#b9d0ff">Fire TV</a> or <a href="#googletv" style="color:#b9d0ff">Google TV</a> steps on this page.</li>
+    </ol>
+    <a class="top" href="#">↑ Pick another TV</a>
+  </section>
+
+  <section id="using">
+    <h2>Using Glass Home</h2>
+    <div class="keys">
+      <span class="k">≡</span><span>Control Center: look, wallpaper, layouts, notes, photos, all settings</span>
+      <span class="k">OK</span><span>Hold OK on a widget to move, resize or change it</span>
+      <span class="k">⏯</span><span>On the home screen: timers, stopwatch, alarm</span>
+      <span class="k">≡ ≡</span><span>During a show: screen off, sound on (Fire TV / Google TV, with the Home button set up)</span>
+      <span class="k">📱</span><span>Your phone as a remote, and to add photos, notes and your calendar: Control Center → Phone link</span>
+    </div>
+    <p class="note" style="margin-top:14px">Set it up again any time: Control Center → More settings → Run first-time setup again. On Samsung, LG and browsers: press OK for Settings.</p>
+  </section>
+
+  <section id="feedback">
+    <h2>Tell us how it went</h2>
+    <p>Anything helps: what TV you have, what was confusing, what broke, what you liked. A phone photo of the screen is perfect.</p>
+    <a class="btn" id="fb" href="__FEEDBACK__">Send feedback</a>
+    <p class="note" id="fbNone">Send it to the person who shared this page with you.</p>
+  </section>
+
+  <p class="note">Glass Home 1.1 · Fire TV, Google TV and Android TV share one download. Samsung, LG and Roku don't let apps replace their home screen, so there it's an app you open (on Roku, also a screensaver). Checksums: <a href="SHA256SUMS.txt" style="color:#b9d0ff">SHA256SUMS.txt</a></p>
+  <p class="note">© 2026 Glass Home (github.com/bavahar09). All rights reserved. This is a test version for personal use: please don't copy, modify or redistribute it. Fonts, wallpapers and other parts made by others keep their own licences (see <a href="NOTICE.txt">NOTICE.txt</a>).</p>
+</main>
+<script>
+  // This page's own address, to type on a TV remote (TV browsers can't follow a link from a phone).
+  (function () {
+    var base = location.host + location.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
+    var i, h = document.querySelectorAll('.here'), t = document.querySelectorAll('.try');
+    for (i = 0; i < h.length; i++) h[i].textContent = base;
+    for (i = 0; i < t.length; i++) t[i].textContent = base + '/try';
+    // the Home button helper's one-liners, pointing at wherever this page is served from
+    var origin = location.protocol === 'file:' ? 'http://THIS-PAGE' : location.protocol + '//' + base;
+    var hm = document.querySelectorAll('.hb-mac'), hw = document.querySelectorAll('.hb-win');
+    for (i = 0; i < hm.length; i++) hm[i].textContent = 'bash <(curl -fsSL ' + origin + '/home-button/mac.sh)';
+    for (i = 0; i < hw.length; i++) hw[i].textContent = 'irm ' + origin + '/home-button/windows.ps1 | iex';
+    var fb = document.getElementById('fb');
+    if (fb.getAttribute('href').indexOf('__') === 0) fb.style.display = 'none';   // no feedback link set up yet
+    else document.getElementById('fbNone').style.display = 'none';
+  })();
+</script>
+</body>
+</html>

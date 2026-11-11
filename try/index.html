@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920">
+<title>Glass Home</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="bg"><div class="bg-img" id="bgA"></div><div class="bg-img" id="bgB"></div><div class="bg-veil"></div></div>
+
+<main id="home">
+  <section class="col">
+    <div class="card" id="weatherCard">
+      <div class="label" id="wCity">Weather</div>
+      <div class="w-now">
+        <div class="w-temp" id="wTemp">--°</div>
+        <div class="w-icon" id="wIcon"></div>
+      </div>
+      <div class="w-desc" id="wDesc">Press OK to set your city</div>
+      <div class="w-hilo" id="wHiLo"></div>
+    </div>
+    <div class="card" id="forecastCard"><div class="days" id="days"></div></div>
+    <div class="card" id="worldCard"><div class="world" id="world"></div></div>
+  </section>
+
+  <section class="hero" id="hero">
+    <div class="date" id="date"></div>
+    <div class="clock" id="clock"><span id="hh">--</span><span class="colon">:</span><span id="mm">--</span><span class="ampm" id="ampm"></span></div>
+    <div class="greet" id="greet"></div>
+    <div class="sun" id="sun"></div>
+  </section>
+</main>
+
+<div class="hint" id="hint"><span class="key">OK</span> Settings</div>
+
+<div id="settings" class="hidden">
+  <div class="panel">
+    <h1>Settings</h1>
+    <ul id="rows"></ul>
+    <div class="panel-hint">▲▼ choose · OK change · Back close</div>
+  </div>
+</div>
+
+<div id="editor" class="hidden">
+  <div class="panel small">
+    <h2 id="edTitle"></h2>
+    <input id="edInput" type="text" autocomplete="off" spellcheck="false">
+    <div class="panel-hint" id="edHint">Type, then press OK</div>
+  </div>
+</div>
+
+<div id="welcome" class="hidden">
+  <div class="panel">
+    <h1 id="wlTitle">Welcome to Glass Home</h1>
+    <div id="wlBody"></div>
+    <div class="panel-hint" id="wlHint"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

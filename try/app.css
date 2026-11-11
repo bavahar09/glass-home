@@ -1,0 +1,94 @@
+/* Glass Home for LG (webOS) and Samsung (Tizen). Laid out for a 1920×1080 screen; 1rem = 10px there. */
+@font-face { font-family: "Inter"; src: url("fonts/Inter.woff2") format("woff2"); font-weight: 100 900; }
+
+html { font-size: calc(100vw / 192); }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0d12; color: #fff;
+  font-family: "Inter", "LG Smart UI", "SamsungOne", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; cursor: none; }
+
+/* Background: two layers cross-fade; a slow drift keeps it alive (and protects the panel). */
+#bg { position: fixed; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; }
+.bg-img { position: absolute; top: -3%; left: -3%; width: 106%; height: 106%; background-size: cover; background-position: center;
+  opacity: 0; transition: opacity 2.4s ease; will-change: transform, opacity; animation: drift 90s ease-in-out infinite alternate; }
+.bg-img.on { opacity: 1; }
+.bg-veil { position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.12) 45%, rgba(0,0,0,.28) 100%); }
+@keyframes drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(-1.2%, -0.8%, 0) scale(1.03); } }
+
+/* Glass: real blur where the TV supports it, a tinted pane where it doesn't. */
+.card, .panel { background: rgba(28, 32, 42, .55); border: 1px solid rgba(255,255,255,.16); border-radius: 3.2rem;
+  box-shadow: 0 1.6rem 4rem rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.18); }
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .card, .panel { background: rgba(255,255,255,.10); -webkit-backdrop-filter: blur(28px) saturate(1.5); backdrop-filter: blur(28px) saturate(1.5); }
+}
+
+#home { position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; padding: 7rem 9rem; box-sizing: border-box; }
+.col { width: 64rem; display: flex; flex-direction: column; }
+.col > .card + .card { margin-top: 2.4rem; }   /* not flex gap: older TV browsers lack it */
+.col > .card { padding: 2.8rem 3.4rem; }
+.label { font-size: 1.9rem; letter-spacing: .18em; text-transform: uppercase; opacity: .72; font-weight: 600; }
+
+.w-now { display: flex; align-items: center; justify-content: space-between; margin-top: .6rem; }
+.w-temp { font-size: 10rem; font-weight: 300; line-height: 1; letter-spacing: -.03em; }
+.w-icon svg { width: 11rem; height: 11rem; }
+.w-desc { font-size: 2.8rem; font-weight: 500; margin-top: .8rem; }
+.w-hilo { font-size: 2.2rem; opacity: .75; margin-top: .4rem; }
+
+.days { display: flex; justify-content: space-between; }
+.day { text-align: center; width: 9.6rem; }
+.day .n { font-size: 2.1rem; font-weight: 600; opacity: .85; }
+.day svg { width: 5.6rem; height: 5.6rem; margin: 1rem 0 .6rem; }
+.day .t { font-size: 2.1rem; font-feature-settings: "tnum"; }
+.day .t span { opacity: .6; margin-left: .6rem; }
+
+.world { display: flex; justify-content: space-between; }
+.city { width: 33%; }
+.city .c { font-size: 1.7rem; letter-spacing: .14em; text-transform: uppercase; opacity: .7; font-weight: 600; }
+.city .t { font-size: 4.4rem; font-weight: 400; font-feature-settings: "tnum"; margin-top: .4rem; }
+.city .t small { font-size: 1.8rem; opacity: .7; margin-left: .4rem; }
+.city .d { font-size: 1.6rem; opacity: .6; margin-top: .2rem; }
+
+/* The clock: big, light, with a glassy sheen. */
+.hero { flex: 1; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-start; padding-top: 1rem;
+  transition: transform 1.2s ease; }
+.date { font-size: 3.6rem; font-weight: 500; letter-spacing: .01em; text-shadow: 0 .2rem 1.2rem rgba(0,0,0,.35); }
+.clock { font-size: 26rem; font-weight: 200; line-height: .95; letter-spacing: -.04em; font-feature-settings: "tnum", "cv01";
+  color: rgba(255,255,255,.92); text-shadow: 0 .4rem 3rem rgba(0,0,0,.25); margin-top: .4rem; white-space: nowrap; }
+@supports (-webkit-background-clip: text) {
+  .clock { background: linear-gradient(170deg, #fff 0%, rgba(255,255,255,.96) 38%, rgba(214,228,255,.78) 60%, rgba(255,255,255,.9) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none;
+    filter: drop-shadow(0 .5rem 2.4rem rgba(0,0,0,.28)); }
+}
+.colon { position: relative; top: -.06em; margin: 0 -.02em; }   /* no transform/opacity: they would break the gradient text */
+.ampm { font-size: 5rem; font-weight: 400; letter-spacing: .02em; margin-left: 1.6rem; }
+.greet { font-size: 4rem; font-weight: 500; margin-top: 1.4rem; text-shadow: 0 .2rem 1.2rem rgba(0,0,0,.35); }
+.sun { font-size: 2.2rem; opacity: .75; margin-top: 1rem; }
+
+.hint { position: fixed; right: 9rem; bottom: 5rem; font-size: 2rem; opacity: .7; transition: opacity 1s; }
+.hint.fade { opacity: 0; }
+.key { display: inline-block; padding: .4rem 1.2rem; border: 1px solid rgba(255,255,255,.5); border-radius: 1rem; margin-right: .8rem; font-weight: 600; font-size: 1.6rem; }
+
+/* Settings and the text editor. */
+#settings, #editor, #welcome { position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.35); }
+.hidden { display: none !important; }
+.panel { width: 92rem; padding: 4.4rem 5.2rem; }
+.panel.small { width: 80rem; }
+.panel h1 { font-size: 4.4rem; font-weight: 600; margin: 0 0 2.6rem; }
+.panel h2 { font-size: 3.4rem; font-weight: 600; margin: 0 0 2.4rem; }
+#rows { list-style: none; margin: 0; padding: 0; }
+#rows li { display: flex; justify-content: space-between; align-items: center; font-size: 2.9rem; padding: 2rem 2.6rem; border-radius: 2rem;
+  transition: background .15s, transform .15s; }
+#rows li .v { opacity: .75; }
+#rows li.sel { background: rgba(255,255,255,.92); color: #0b0d12; transform: scale(1.02); }
+#rows li.sel .v { opacity: .7; }
+.panel-hint { font-size: 2rem; opacity: .65; margin-top: 2.6rem; text-align: center; }
+#edInput { width: 100%; box-sizing: border-box; font: inherit; font-size: 3.4rem; padding: 2rem 2.6rem; border-radius: 2rem;
+  border: 2px solid rgba(255,255,255,.6); background: rgba(0,0,0,.25); color: #fff; outline: none; }
+#edInput:focus { border-color: #fff; }
+
+/* first run (welcome) */
+#wlBody p { font-size: 2.6rem; opacity: .85; margin: 0 0 2.4rem; line-height: 1.4; }
+.wl-row { display: flex; align-items: center; font-size: 2.5rem; margin: 1.6rem 0; }
+.wl-row .key { min-width: 8rem; text-align: center; margin-right: 2.4rem; font-size: 2rem; }
+.wl-go { display: inline-block; margin-top: 1.6rem; padding: 1.4rem 4.4rem; border-radius: 4rem; background: #fff; color: #111; font-size: 2.6rem; font-weight: 600; }
