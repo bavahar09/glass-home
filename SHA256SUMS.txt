@@ -1,8 +1,8 @@
-754832c0ff1af952db0990ff75305e652c916f53acb3be246fab94f51bdaa738  android-tv/GlassHome-AndroidTV-1.1.apk
-0bcd31311d81a3987f1b80d84ec1f98cf72b6266d8c56ffac9689390dda8a663  android-tv/GlassHome-AndroidTV-AppOnly-1.1.apk
-525b6ab961f35e2915d306befecdf29cba3bb7a1621a68bc7363d3c0cc70dc5c  roku/GlassHome-Roku-1.1.zip
-86d6f5426a4f2e3473de463150e85550e80a420dce32381d64da6228298b4976  lg-webos/GlassHome-LG-webOS-1.1.ipk
-85586e36fbfc1b6ee6429584404c3ee4fc14adec37d411d5ccfaf5730d7fda48  samsung-tizen/GlassHome-Samsung-Tizen-1.1-unsigned.wgt
+155ebf57ce340b1b78adc1da1324cb5bd881ac11d35428464fabe8e2d9f431bf  android-tv/GlassHome-AndroidTV-1.1.apk
+bd4c36d7e81e106372e51fbdbaf39386cc164760c30be2c86029729fe9a334ff  android-tv/GlassHome-AndroidTV-AppOnly-1.1.apk
+29a422cdb3efe9b5e67e106cf94c60edd041169b365ffdcdef51bebc5148caa3  roku/GlassHome-Roku-1.1.zip
+a85eef082fdf9b83d33901a0636a87bbb91ab495fe913f5b558bb72b5f8e3f3f  lg-webos/GlassHome-LG-webOS-1.1.ipk
+1f0e5e0856cd7ba18b94f3482be35eec52e6f25ca78ee78986af633d6d36d646  samsung-tizen/GlassHome-Samsung-Tizen-1.1-unsigned.wgt
 67e40723db87e49d5bc400051a09c8c89e3cd61684d36ee46cfe9dc2aa23a2f2  home-button/GlassHome-HomeButton-Mac.zip
 2b8b223d563de222d5e259735a4c4f18b9c42962db5a2b75f7699baf794d6db7  home-button/GlassHome-HomeButton-Windows.bat
 ea511d15e9908c6071c7904361e4d8156b71ec2793bff56606c211eb13c13b14  home-button/mac.sh
